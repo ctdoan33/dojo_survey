@@ -7,6 +7,13 @@
     <title>Dojo Survey Submission</title>
 </head>
 <body>
+{% with messages = get_flashed_messages() %}
+    {% if messages %}
+        {% for message in messages %}
+            <p>{{message}}</p>
+        {% endfor %}
+    {% endif %}
+{% endwith %}
     <form action="/">
         <h1>Submitted Info</h1>
         <p>Name: {{subname}}</p>
