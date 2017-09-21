@@ -1,0 +1,25 @@
+form{
+    border: 1px solid black;
+    display: inline-block;
+    padding: 1em;
+}
+div{
+    display:inline-block;
+    width: 45%;
+    min-width: 6em;
+}
+select{
+    width: 100%;
+}
+textarea{
+    width: 100%;
+}
+.submit{
+    float: right;
+    color: white;
+    background-color: steelblue;
+    box-shadow: 2px 2px 1px black;
+}
+h2{
+    text-decoration: underline;
+}

@@ -4,35 +4,46 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
     <title>Dojo Survey</title>
 </head>
 <body>
     <form action="/result" method="post">
+        <div>
         <p>Your Name:</p>
-        <input type="text" name="name">
         <p>Dojo Location:</p>
-        <select name="location">
-            <option value="San Jose">San Jose</option>
-            <option value="Seattle">Seattle</option>
-            <option value="Los Angeles">Los Angeles</option>
-            <option value="Dallas">Dallas</option>
-            <option value="Washington D.C">Washington D.C.</option>
-            <option value="Chicago">Chicago</option>
-            <option value="Tulsa">Tulsa</option>
-        </select>
         <p>Favorite Language:</p>
-        <select name="language">
-            <option value="C#">C#</option>
-            <option value="Ruby">Ruby</option>
-            <option value="Python">Python</option>
-            <option value="JavaScript">JavaScript</option>
-            <option value="Java">Java</option>
-            <option valie="Swift">Swift</option>
-        </select>
+        </div>
+        <div id="inputs">
+            <p>
+                <input type="text" name="name">
+            </p>
+            <p>
+                <select name="location">
+                    <option value="San Jose">San Jose</option>
+                    <option value="Seattle">Seattle</option>
+                    <option value="Los Angeles">Los Angeles</option>
+                    <option value="Dallas">Dallas</option>
+                    <option value="Washington D.C">Washington D.C.</option>
+                    <option value="Chicago">Chicago</option>
+                    <option value="Tulsa">Tulsa</option>
+                </select>
+            </p>
+            <p>
+                <select name="language">
+                    <option value="C#">C#</option>
+                    <option value="Ruby">Ruby</option>
+                    <option value="Python">Python</option>
+                    <option value="JavaScript">JavaScript</option>
+                    <option value="Java">Java</option>
+                    <option valie="Swift">Swift</option>
+                </select>
+            </p>
+        </div>
         <p>Comment (required, less than 120 characters):</p>
         <textarea name="comment"></textarea>
         <br>
-        <input type="submit" value="Submit">
+        <input class="submit" type="submit" value="Submit">
     </form>
 </body>
 </html>

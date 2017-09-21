@@ -5,7 +5,7 @@ app.secret_key = 'KeepItSecretKeepItSafe'
 def survey():
     return render_template("index.html")
 @app.route("/result", methods=["POST"])
-def results():
+def result():
     name = request.form["name"]
     if len(name)<1:
         flash("Name field cannot be blank")
@@ -16,5 +16,5 @@ def results():
         flash("Comment field cannot be blank")
     elif len(comment)>120:
         flash("Comment cannot be more than 120 characters")
-    return render_template("result.html", subname=name, sublocation=location, sublanguage=language, subcomment=comment)
+    return render_template("result.html", name=name, location=location, language=language, comment=comment)
 app.run(debug=True)
