@@ -10,15 +10,12 @@
 <body>
     <form action="/result" method="post">
         <div>
-        <p>Your Name:</p>
-        <p>Dojo Location:</p>
-        <p>Favorite Language:</p>
-        </div>
-        <div id="inputs">
             <p>
+                <label>Your Name:</label>
                 <input type="text" name="name">
             </p>
             <p>
+                <label>Dojo Location:</label>
                 <select name="location">
                     <option value="San Jose">San Jose</option>
                     <option value="Seattle">Seattle</option>
@@ -30,6 +27,7 @@
                 </select>
             </p>
             <p>
+                <label>Favorite Language:</label>
                 <select name="language">
                     <option value="C#">C#</option>
                     <option value="Ruby">Ruby</option>
@@ -40,9 +38,8 @@
                 </select>
             </p>
         </div>
-        <p>Comment (required, less than 120 characters):</p>
+        <p><label>Comment (optional, less than 120 characters):</label></p>
         <textarea name="comment"></textarea>
-        <br>
         <input class="submit" type="submit" value="Submit">
     </form>
 </body>

@@ -12,9 +12,7 @@ def result():
     location = request.form["location"]
     language = request.form["language"]
     comment = request.form["comment"]
-    if len(comment)<1:
-        flash("Comment field cannot be blank")
-    elif len(comment)>120:
+    if len(comment)>120:
         flash("Comment cannot be more than 120 characters")
     return render_template("result.html", name=name, location=location, language=language, comment=comment)
 app.run(debug=True)

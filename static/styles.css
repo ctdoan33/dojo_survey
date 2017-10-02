@@ -1,18 +1,26 @@
 form{
     border: 1px solid black;
-    display: inline-block;
+    display: table;
     padding: 1em;
 }
-div{
-    display:inline-block;
-    width: 45%;
-    min-width: 6em;
+p{
+    display: table-row;
+}
+label{
+    display: table-cell;
+    padding: .5em;
+}
+input{
+    display: table-cell;
+    margin: .5em;
 }
 select{
-    width: 100%;
+    display: table-cell;
+    margin: .5em;
 }
 textarea{
-    width: 100%;
+    width: 95%;
+    margin: .5em;
 }
 .submit{
     float: right;
